@@ -11,6 +11,7 @@ semantic interaction and target state prediction. Thanks to this joint strength,
 <div align="center">
 <img src="figures/ideal_situation_v2.png" width="450">
 </div>
+
 ## Framework
 The overall framework of the proposed IoUformer. It consists of three major components: convolutional feature extractor, the encoder–decoder transformer and the IoU (prediction) head. Besides, PrPool in the feature extractor is the precise RoI pooling (Jiang et al., 2018), 𝜑𝜃
 in the feature extractor is shared convolutional backbone. The (target)
@@ -18,6 +19,7 @@ template and search region with RoIs are fed to convolutional feature extractor 
 <div align="center">
 <img src="figures/iou_predictor_v2.png" height="300">
 </div>
+
 ## Authors
 
 Huayue Cai, Long Lan, Jing Zhang, Xiang Zhang, Yibing Zhan, Zhigang Luo
