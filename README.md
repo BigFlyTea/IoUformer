@@ -16,7 +16,7 @@ The overall framework of the proposed IoUformer. It consists of three major comp
 in the feature extractor is shared convolutional backbone. The (target)
 template and search region with RoIs are fed to convolutional feature extractor which generates the input of the transformer. Transformer grasps two sorts of semantic interactions between target and RoIs patches and among different RoIs, while IoU head predicts the corresponding IoU values.
 <div align="center">
-<img src="figures/iou_predictor_v2.png" width="450">
+<img src="figures/iou_predictor_v2.png" height="300">
 </div>
 ## Authors
 
