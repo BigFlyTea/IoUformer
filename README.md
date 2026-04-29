@@ -8,14 +8,16 @@ This is the official implementation of the paper **"IoUformer: Pseudo-IoU predic
 
 Siamese tracking has witnessed tremendous progress in tracking paradigm. However, its default box estimation pipeline still faces a crucial inconsistency issue, namely, the bounding box decided by its classification score is not always best overlapped with the ground truth, thus harming performance. To this end, we explore a novel simple tracking paradigm based on the intersection over union (IoU) value prediction. To first bypass this inconsistency issue, we propose a concise target state predictor termed IoUformer, which instead of default box estimation pipeline directly predicts the IoU values related to tracking performance metrics. In detail, it extends the long-range dependency modeling ability of transformer to jointly grasp target-aware interactions between target template and search region, and search sub-region interactions, thus neatly unifying global 
 semantic interaction and target state prediction. Thanks to this joint strength, IoUformer can predict reliable IoU values near-linear with the ground truth, which paves a safe way for our new IoU-based siamese tracking paradigm. Since it is non-trivial to explore this paradigm with pleased efficacy and portability, we offer the respective network components and two alternative localization ways. Experimental results show that our IoUformer-based tracker achieves promising results with less training data. For its applicability, it still serves as a refinement module to consistently boost existing advanced trackers
-![IoUformer](figures/ideal_situation_v2.png)
-
+<div align="center">
+<img src="figures/ideal_situation_v2.png" width="450">
+</div>
 ## Framework
 The overall framework of the proposed IoUformer. It consists of three major components: convolutional feature extractor, the encoder–decoder transformer and the IoU (prediction) head. Besides, PrPool in the feature extractor is the precise RoI pooling (Jiang et al., 2018), 𝜑𝜃
 in the feature extractor is shared convolutional backbone. The (target)
 template and search region with RoIs are fed to convolutional feature extractor which generates the input of the transformer. Transformer grasps two sorts of semantic interactions between target and RoIs patches and among different RoIs, while IoU head predicts the corresponding IoU values.
-![IoUformer](figures/iou_predictor_v2.png)
-
+<div align="center">
+<img src="figures/iou_predictor_v2.png" width="450">
+</div>
 ## Authors
 
 Huayue Cai, Long Lan, Jing Zhang, Xiang Zhang, Yibing Zhan, Zhigang Luo
